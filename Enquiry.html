@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enquiryForm</title>
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+<body>
+
+      <header>
+    <img src="Images/Screenshot 2025-08-24 211547.png" alt="Logo" style="width: 250px;height:160px;">
+      <h2 style="color: aliceblue;">Mental Mania</h2>
+    </div>
+    <nav>
+       <a href="index.html">Home</a>
+      <a href="Aboutus.html">About us</a>
+      <a href="Service.html">Services</a>
+      <a href="Donations.html">Donations</a>
+      <a href="ContactUs.html">Contact Us</a>
+    </nav>
+  </header>
+
+<section>
+<h2>Service Enquiry</h2>
+<form id="enquiryForm">
+<label>Name :</label>
+<input type="text" id="name" required>
+<label>Email :</label>
+<input type="email" id="email" required>
+<label>Service Type :</label>
+<select id="service" required>
+<option value="">Select</option>
+<option value="Therapy">Therapy Session</option>
+<option value="Volunteer">Volunteer</option>
+<option value="Sponsorship">Sponsorship</option>
+</select>
+<button type="submit">Submit</button>
+</form>
+<div id="response"></div>
+ 
+</section>
+
+<script>
+document.getElementById('enquiryForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const service = document.getElementById('service').value;
+  document.getElementById('response').innerHTML =
+    `<p>Thank you, ${name}! We will get back to you about ${service} soon.</p>`;
+});
+</script>
+
+
+
+
+
+<a href="Service.html" class="btn">Back to Services</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
